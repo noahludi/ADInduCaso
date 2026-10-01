@@ -1,0 +1,16 @@
+{
+  "logo": "https://api.instazoomer.com/media/profiles/17065689302/profile.jpg",
+  "originalWork": "https://www.instagram.com/p/Db8693eiQmk/",
+  "photos": [
+    "trabajo-real-01.webp",
+    "trabajo-real-02.webp",
+    "trabajo-real-03.webp",
+    "trabajo-real-04.webp"
+  ],
+  "preview": {
+    "file": "buzos-preview.webp",
+    "type": "AI-generated 3D visualization based on user-provided photographs",
+    "tool": "built-in image_gen"
+  },
+  "notes": "The chat is an illustrative example, not a real testimonial. The logo in the illustrative attachment is a code-native approximation. Product photos belong to the referenced AD Indumentaria post."
+}

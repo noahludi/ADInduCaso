@@ -1,0 +1,25 @@
+{
+  "name": "ad-indumentaria",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:e2e": "node scripts/check-site.mjs"
+  },
+  "dependencies": {
+    "motion": "13.5.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0",
+    "sharp": "0.34.5",
+    "vite": "6.3.5"
+  }
+}
