@@ -10,7 +10,8 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test:e2e": "node scripts/check-site.mjs"
+    "test:e2e": "node scripts/check-site.mjs",
+    "test:gallery": "node scripts/check-gallery.mjs"
   },
   "dependencies": {
     "motion": "13.5.0",
