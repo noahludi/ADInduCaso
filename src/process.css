@@ -1,0 +1,459 @@
+.scroll-process {
+  padding: 0;
+}
+.process-track {
+  position: relative;
+  height: 500svh;
+}
+.process-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: clamp(20px, 4vh, 48px);
+}
+.scroll-process .section-heading h2 {
+  font-size: clamp(40px, 4.1vw, 62px);
+}
+.process-scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #71777b;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+.scroll-process .step-tabs {
+  margin-top: 26px;
+  gap: 0;
+}
+.scroll-process .step-tab {
+  min-width: 0;
+}
+.process-progress {
+  height: 2px;
+  flex-shrink: 0;
+  background: #deded5;
+}
+.process-progress > span {
+  display: block;
+  height: 100%;
+  background: var(--red);
+  transform-origin: left;
+}
+.scroll-process .process-panel {
+  flex: 1;
+  min-height: 0;
+  padding: 24px 0;
+  gap: 7%;
+  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-rows: minmax(0, 1fr);
+}
+.scroll-process .step-copy {
+  padding: 0 25px;
+}
+.scroll-process .step-copy h3 {
+  font-size: clamp(36px, 3.8vw, 54px);
+}
+.scroll-process .step-copy > p {
+  max-width: 420px;
+}
+.scroll-process .process-detail {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  font-size: 12px;
+  margin-top: 22px;
+}
+.process-detail svg {
+  margin-top: 3px;
+  color: #55725a;
+}
+.scroll-process .transformation-visual {
+  width: 100%;
+  max-width: 590px;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100%;
+  max-height: 620px;
+  min-height: 0;
+  background: #e8e7de;
+  border: 1px solid #d7d6cd;
+}
+.transformation-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 18px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #6c706b;
+}
+.transformation-top > span:first-child {
+  color: var(--ink);
+  font-weight: 650;
+}
+.transformation-frame {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: #222527;
+}
+.design-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#ffffff07 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff07 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.transformation-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+  will-change: opacity, transform;
+}
+.reference-image {
+  padding: 50px;
+}
+.result-image {
+  object-fit: cover;
+  padding: 0;
+}
+.transformation-label {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 9px 12px;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: 650;
+}
+.design-approved {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 13px;
+  font-size: 10px;
+  background: #dce9da;
+  color: #34593d;
+}
+.print-scan {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #f65460;
+  box-shadow: 0 0 25px #f65460;
+}
+.print-scan span {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  color: white;
+  background: var(--red);
+  padding: 7px 9px;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.transformation-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  font-size: 10px;
+}
+.transformation-bottom > span,
+.transformation-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.transformation-bottom > span {
+  color: #707774;
+}
+.transformation-bottom a {
+  color: var(--red);
+  white-space: nowrap;
+}
+.process-footnote {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #888c89;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  padding-top: 14px;
+  border-top: 1px solid #d7d8d2;
+}
+@media (max-width: 1000px) {
+  .process-scroll-hint {
+    font-size: 10px;
+  }
+  .scroll-process .step-copy {
+    padding: 0;
+  }
+  .scroll-process .process-panel {
+    gap: 5%;
+  }
+  .transformation-top > span:last-child {
+    display: none;
+  }
+  .transformation-bottom {
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+  .scroll-process .step-tab {
+    gap: 7px;
+    font-size: 11px;
+  }
+  .scroll-process .step-tab > svg {
+    display: none;
+  }
+}
+@media (max-width: 680px) {
+  .scroll-process {
+    padding: 0;
+  }
+  .process-track {
+    height: 480svh;
+  }
+  .process-sticky {
+    padding-block: 18px;
+  }
+  .scroll-process .section-heading {
+    display: flex;
+    align-items: end;
+    gap: 12px;
+  }
+  .scroll-process .section-heading h2 {
+    font-size: clamp(29px, 7.6vw, 46px);
+    letter-spacing: -0.3px;
+  }
+  .process-scroll-hint {
+    display: none;
+  }
+  .scroll-process .step-tabs {
+    margin-top: 12px;
+  }
+  .scroll-process .step-tab {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 9px;
+    padding: 9px 2px;
+  }
+  .scroll-process .step-number {
+    width: 25px;
+    height: 25px;
+    font-size: 9px;
+  }
+  .scroll-process .step-tab > span:nth-child(2) {
+    min-height: 24px;
+  }
+  .scroll-process .process-panel {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    align-items: stretch;
+    gap: 15px;
+    padding: 16px 0;
+  }
+  .scroll-process .step-copy h3 {
+    font-size: 33px;
+    margin-top: 7px;
+  }
+  .scroll-process .step-overline {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+  .scroll-process .step-copy > p {
+    margin-top: 9px;
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: none;
+  }
+  .scroll-process .step-copy .process-detail {
+    display: none;
+  }
+  .scroll-process .step-navigation {
+    border: 0;
+    margin-top: 5px;
+    padding: 0;
+  }
+  .scroll-process .step-next {
+    min-height: 32px;
+    font-size: 10px;
+    gap: 10px;
+  }
+  .transformation-visual {
+    max-width: none;
+    padding: 0;
+  }
+  .transformation-top {
+    padding: 10px 12px;
+    font-size: 8px;
+  }
+  .transformation-image {
+    padding: 8px;
+  }
+  .reference-image {
+    padding: 25px;
+  }
+  .result-image {
+    padding: 0;
+    object-fit: contain;
+  }
+  .transformation-bottom {
+    padding: 9px 10px;
+    flex-wrap: nowrap;
+    font-size: 8px;
+    gap: 6px;
+  }
+  .transformation-bottom > span,
+  .transformation-bottom a {
+    gap: 4px;
+  }
+  .transformation-bottom a {
+    font-size: 8px;
+  }
+  .transformation-label {
+    left: 10px;
+    bottom: 10px;
+    font-size: 8px;
+    padding: 7px 9px;
+  }
+  .process-footnote {
+    padding-top: 10px;
+    font-size: 7px;
+    letter-spacing: 0.7px;
+  }
+  .process-footnote > span:last-child {
+    display: none;
+  }
+  .design-approved {
+    top: 10px;
+    right: 10px;
+    font-size: 8px;
+  }
+}
+@media (max-height: 700px) and (min-width: 681px) {
+  .process-sticky {
+    padding-block: 16px;
+  }
+  .scroll-process .section-heading h2 {
+    font-size: 40px;
+  }
+  .scroll-process .step-tabs {
+    margin-top: 14px;
+  }
+  .scroll-process .step-copy h3 {
+    font-size: 38px;
+  }
+  .scroll-process .step-copy > p {
+    font-size: 12px;
+  }
+}
+@media (max-height: 700px) and (max-width: 680px) {
+  .process-sticky {
+    padding-block: 10px;
+  }
+  .scroll-process .section-heading h2 {
+    font-size: 28px;
+  }
+  .scroll-process .step-copy h3 {
+    font-size: 28px;
+  }
+  .scroll-process .step-copy > p {
+    font-size: 11px;
+  }
+  .scroll-process .step-tab {
+    padding-block: 6px;
+  }
+  .scroll-process .process-panel {
+    padding-block: 10px;
+    gap: 8px;
+  }
+  .transformation-top {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .transformation-image {
+    will-change: auto;
+  }
+}
+@media (max-height: 500px) and (min-width: 681px) {
+  .process-sticky {
+    padding-block: 10px;
+  }
+  .scroll-process .section-heading h2 {
+    font-size: 30px;
+  }
+  .process-scroll-hint {
+    font-size: 9px;
+  }
+  .scroll-process .step-tabs {
+    margin-top: 8px;
+  }
+  .scroll-process .step-tab {
+    padding-block: 9px;
+    font-size: 10px;
+  }
+  .scroll-process .step-number {
+    width: 24px;
+    height: 24px;
+  }
+  .scroll-process .process-panel {
+    padding-block: 12px;
+  }
+  .scroll-process .step-copy h3 {
+    font-size: 28px;
+    margin-top: 8px;
+  }
+  .scroll-process .step-copy > p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  .scroll-process .step-copy .process-detail,
+  .process-footnote {
+    display: none;
+  }
+  .scroll-process .step-navigation {
+    margin-top: 10px;
+    padding-top: 5px;
+  }
+  .transformation-top {
+    display: none;
+  }
+  .transformation-bottom {
+    padding: 8px 10px;
+    font-size: 8px;
+  }
+  .transformation-image {
+    padding: 6px;
+  }
+  .result-image {
+    padding: 0;
+    object-fit: contain;
+  }
+  .transformation-label {
+    font-size: 7px;
+    bottom: 8px;
+    padding: 6px 8px;
+  }
+}

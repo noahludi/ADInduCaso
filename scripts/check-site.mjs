@@ -64,22 +64,6 @@ try {
   await tabs.nth(0).focus();
   await page.keyboard.press("ArrowRight");
   assert.equal(await tabs.nth(1).getAttribute("aria-selected"), "true");
-  await page
-    .getByRole("button", { name: "Resultado real", exact: true })
-    .click();
-  assert.match(
-    await page.locator(".mockup-viewer > img").getAttribute("src"),
-    /trabajo-real/,
-  );
-  await page.getByRole("button", { name: "Boceto 3D", exact: true }).click();
-  assert.match(
-    await page.locator(".mockup-viewer > img").getAttribute("src"),
-    /buzos-preview/,
-  );
-  await page.getByRole("button", { name: "¡Así lo quiero!" }).click();
-  assert.equal(await tabs.nth(2).getAttribute("aria-selected"), "true");
-  await tabs.nth(0).click();
-
   await page.getByRole("button", { name: "El boceto", exact: true }).click();
   assert.match(
     await page.locator(".work-main-photo > img").getAttribute("src"),
@@ -145,7 +129,7 @@ try {
       `Removed copy remains: ${text}`,
     );
   await page
-    .locator("#proceso")
+    .locator(".process-sticky")
     .screenshot({ path: "test-results/process-desktop.png" });
 
   for (const width of [320, 360, 390, 680, 768, 900, 1024, 1440, 1920]) {
@@ -233,20 +217,7 @@ try {
       value,
     initialFloat,
   );
-  await animated.locator("#proceso").scrollIntoViewIfNeeded();
-  await animated.waitForFunction(() =>
-    [...document.querySelectorAll(".chat-body .message")].every(
-      (el) => Number(getComputedStyle(el).opacity) === 1,
-    ),
-  );
-  await animated.getByRole("tab").nth(1).click();
-  await animated.waitForFunction(
-    () =>
-      Number(
-        getComputedStyle(document.querySelector(".step-visual")).opacity,
-      ) === 1,
-  );
-  await animated.getByRole("button", { name: "¡Así lo quiero!" }).click();
+  await animated.getByRole("tab").nth(2).click();
   await animated.getByRole("heading", { name: "Vos das el sí." }).waitFor();
   await animated.locator("#trabajos").scrollIntoViewIfNeeded();
   await animated
@@ -290,7 +261,7 @@ try {
   await animated.close();
   assert.deepEqual(errors, []);
   console.log(
-    "OK: 5 steps, keyboard, approval, gallery, FAQs, Instagram + exact WhatsApp number, removed copy, mobile menu, 9 responsive sizes, desktop/mobile Motion animations and reduced motion. No browser errors.",
+    "OK: 5 scroll steps, keyboard, gallery, FAQs, Instagram + exact WhatsApp number, removed copy, mobile menu, 9 responsive sizes, desktop/mobile Motion animations and reduced motion. No browser errors.",
   );
 } finally {
   await browser.close();

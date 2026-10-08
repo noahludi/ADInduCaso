@@ -32,6 +32,11 @@ try {
     "page",
   );
   assert.equal(await page.locator(".mosaic-card").count(), photos.length);
+  await page.locator(".mosaic-image > img").evaluateAll((images) =>
+    images.forEach((image) => {
+      image.loading = "eager";
+    }),
+  );
   const brokenImages = await page
     .locator(".mosaic-image > img")
     .evaluateAll(async (images) => {
@@ -48,7 +53,7 @@ try {
   });
 
   for (const [name, kind] of [
-    ["Prototipos 3D", "prototype"],
+    ["Bocetos", "prototype"],
     ["Resultados reales", "result"],
   ]) {
     await page.getByRole("button", { name, exact: true }).click();
@@ -63,6 +68,43 @@ try {
   }
   await page.getByRole("button", { name: "Todas", exact: true }).click();
 
+  assert.equal(await page.locator(".gallery-project").count(), projects.length);
+  for (const project of projects) {
+    await page.getByLabel("Filtrar por proyecto").selectOption(project.id);
+    assert.equal(
+      await page.locator(".mosaic-card").count(),
+      project.photos.length,
+    );
+    assert.equal(await page.locator(".gallery-project").count(), 1);
+    await page.locator(".mosaic-card").first().click();
+    const viewer = page.getByRole("dialog");
+    await viewer.waitFor({ state: "visible" });
+    const hasPair =
+      project.photos.some((photo) => photo.kind === "prototype") &&
+      project.photos.some((photo) => photo.kind === "result");
+    assert.equal(
+      await viewer.getByRole("button", { name: "Ver antes y después" }).count(),
+      hasPair ? 1 : 0,
+    );
+    if (hasPair) {
+      await viewer.getByRole("button", { name: "Ver antes y después" }).click();
+      assert.equal(await viewer.locator(".photo-comparison img").count(), 2);
+      const sources = await viewer
+        .locator(".photo-comparison img")
+        .evaluateAll((images) =>
+          images.map((image) => image.getAttribute("src")),
+        );
+      assert.ok(
+        sources.every((src) =>
+          project.photos.some((photo) => photo.src === src),
+        ),
+        "Comparison mixed unrelated projects",
+      );
+    }
+    await page.keyboard.press("Escape");
+  }
+  await page.getByLabel("Filtrar por proyecto").selectOption("all");
+
   const opener = page.locator(".mosaic-card").first();
   await opener.click();
   const dialog = page.getByRole("dialog");
@@ -73,7 +115,7 @@ try {
   );
   assert.equal(
     await dialog
-      .getByRole("button", { name: "Prototipo 3D", exact: true })
+      .getByRole("button", { name: "Boceto", exact: true })
       .getAttribute("aria-pressed"),
     "true",
   );
@@ -99,9 +141,7 @@ try {
     await dialog.locator(".photo-dialog-stage > img").getAttribute("src"),
     firstResult,
   );
-  await dialog
-    .getByRole("button", { name: "Prototipo 3D", exact: true })
-    .click();
+  await dialog.getByRole("button", { name: "Boceto", exact: true }).click();
   assert.match(
     await dialog.locator(".photo-dialog-stage > img").getAttribute("src"),
     /buzos-preview/,
@@ -109,7 +149,7 @@ try {
   await dialog.locator(".viewer-thumbnails button").last().click();
   assert.match(
     await dialog.locator(".photo-dialog-stage > img").getAttribute("src"),
-    /trabajo-real-04/,
+    /resultado-nuevo/,
   );
   for (let i = 0; i < 14; i++) {
     await page.keyboard.press("Tab");

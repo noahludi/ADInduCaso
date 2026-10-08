@@ -12,5 +12,11 @@
     "type": "AI-generated 3D visualization based on user-provided photographs",
     "tool": "built-in image_gen"
   },
-  "notes": "The chat is an illustrative example, not a real testimonial. The logo in the illustrative attachment is a code-native approximation. Product photos belong to the referenced AD Indumentaria post."
+  "userProvidedPhotos": {
+    "directory": "FOTOS_AD/",
+    "manifest": "src/gallery/imported-photos.json",
+    "importScript": "scripts/import-ad-photos.mjs",
+    "notes": "User-provided mockups and product photographs are grouped by matching visible branding. Phone UI was cropped from two mockups. Duplicate JPEG copies of the Leandro Hill and Los Estribos PNGs were omitted. The process reference is a detail crop of the supplied El Amigo mockup, not a separate customer submission. Originals are preserved."
+  },
+  "notes": "Original El Ramblón product photos belong to the referenced AD Indumentaria post. The scroll story uses the supplied El Amigo artwork and real result. Approval and the print wipe illustrate the ordering process; there is no claim of a photographed production step."
 }

@@ -1,0 +1,194 @@
+[
+  {
+    "project": "el-amigo",
+    "id": "boceto",
+    "original": "FOTOS_AD/Leandro Hill.png",
+    "src": "/images/galeria/el-amigo/boceto.webp",
+    "width": 1400,
+    "height": 1562
+  },
+  {
+    "project": "el-amigo",
+    "id": "frente",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.37 PM (1).jpeg",
+    "src": "/images/galeria/el-amigo/frente.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "el-amigo",
+    "id": "espalda",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.38 PM.jpeg",
+    "src": "/images/galeria/el-amigo/espalda.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "los-estribos",
+    "id": "boceto",
+    "original": "FOTOS_AD/Los Estribos De Gieco.png",
+    "src": "/images/galeria/los-estribos/boceto.webp",
+    "width": 1400,
+    "height": 778
+  },
+  {
+    "project": "los-estribos",
+    "id": "resultado",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.39 PM.jpeg",
+    "src": "/images/galeria/los-estribos/resultado.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "despensa-la-amistad",
+    "id": "boceto",
+    "original": "FOTOS_AD/Marcelo.png",
+    "src": "/images/galeria/despensa-la-amistad/boceto.webp",
+    "width": 1400,
+    "height": 1396
+  },
+  {
+    "project": "despensa-la-amistad",
+    "id": "frente",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.56.18 PM (1).jpeg",
+    "src": "/images/galeria/despensa-la-amistad/frente.webp",
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "project": "despensa-la-amistad",
+    "id": "espalda",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.56.18 PM.jpeg",
+    "src": "/images/galeria/despensa-la-amistad/espalda.webp",
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "project": "mn-motos",
+    "id": "boceto",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.39 PM (2).jpeg",
+    "src": "/images/galeria/mn-motos/boceto.webp",
+    "width": 739,
+    "height": 700,
+    "crop": {
+      "left": 0,
+      "top": 480,
+      "width": 739,
+      "height": 700
+    }
+  },
+  {
+    "project": "mn-motos",
+    "id": "espalda",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.39 PM (3).jpeg",
+    "src": "/images/galeria/mn-motos/espalda.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "mn-motos",
+    "id": "frente",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.39 PM (4).jpeg",
+    "src": "/images/galeria/mn-motos/frente.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "augusto-almada",
+    "id": "espalda",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.36 PM.jpeg",
+    "src": "/images/galeria/augusto-almada/espalda.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "augusto-almada",
+    "id": "conjunto",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.37 PM.jpeg",
+    "src": "/images/galeria/augusto-almada/conjunto.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "mecanica",
+    "id": "espalda",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.38 PM (2).jpeg",
+    "src": "/images/galeria/mecanica/espalda.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "mecanica",
+    "id": "frente",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.38 PM (3).jpeg",
+    "src": "/images/galeria/mecanica/frente.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "bian-tech",
+    "id": "gorras",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.40 PM (1).jpeg",
+    "src": "/images/galeria/bian-tech/gorras.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "bian-tech",
+    "id": "conjunto",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.40 PM (2).jpeg",
+    "src": "/images/galeria/bian-tech/conjunto.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "el-ramblon",
+    "id": "boceto-original",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.40 PM.jpeg",
+    "src": "/images/galeria/el-ramblon/boceto-original.webp",
+    "width": 739,
+    "height": 960,
+    "crop": {
+      "left": 0,
+      "top": 320,
+      "width": 739,
+      "height": 960
+    }
+  },
+  {
+    "project": "el-ramblon",
+    "id": "resultado-nuevo",
+    "original": "FOTOS_AD/WhatsApp Image 2026-10-01 at 2.03.39 PM (1).jpeg",
+    "src": "/images/galeria/el-ramblon/resultado-nuevo.webp",
+    "width": 1400,
+    "height": 1400
+  },
+  {
+    "project": "el-amigo",
+    "id": "referencia",
+    "original": "FOTOS_AD/Leandro Hill.png",
+    "src": "/images/galeria/el-amigo/referencia.webp",
+    "width": 1050,
+    "height": 1220,
+    "crop": {
+      "left": 3010,
+      "top": 1050,
+      "width": 1050,
+      "height": 1220
+    }
+  },
+  {
+    "project": "el-amigo",
+    "id": "boceto-espalda",
+    "original": "FOTOS_AD/Leandro Hill.png",
+    "src": "/images/galeria/el-amigo/boceto-espalda.webp",
+    "width": 1400,
+    "height": 1497,
+    "crop": {
+      "left": 2460,
+      "top": 650,
+      "width": 2320,
+      "height": 2480
+    }
+  }
+]

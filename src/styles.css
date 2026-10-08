@@ -411,22 +411,9 @@ p {
   margin-left: auto;
   opacity: 0.65;
 }
-.step-tab::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  background: transparent;
-  transition: background 0.2s;
-}
 .step-tab.active {
   color: var(--ink);
   font-weight: 650;
-}
-.step-tab.active::after {
-  background: var(--red);
 }
 .step-number {
   display: grid;
@@ -1771,15 +1758,6 @@ p {
 }
 .footer-socials {
   gap: 28px;
-}
-.step-tab::after {
-  transform: scaleX(0);
-  transform-origin: left;
-  background: var(--red);
-  transition: transform 0.3s ease;
-}
-.step-tab.active::after {
-  transform: scaleX(1);
 }
 .gallery-thumbs > button {
   transition:

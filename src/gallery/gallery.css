@@ -92,8 +92,9 @@
 }
 
 .photo-mosaic {
-  columns: 3;
-  column-gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
   padding-top: 16px;
 }
 
@@ -101,7 +102,7 @@
   display: inline-block;
   width: 100%;
   break-inside: avoid;
-  margin: 0 0 24px;
+  margin: 0;
   padding: 0;
   text-align: left;
   background: transparent;
@@ -487,5 +488,187 @@
   .mosaic-card:hover .mosaic-image > img,
   .mosaic-card:hover .mosaic-expand {
     transform: none;
+  }
+}
+
+.gallery-heading h1 {
+  margin-bottom: 18px;
+}
+.gallery-intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #707777;
+  margin-bottom: 30px;
+}
+.gallery-project-select {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #737b7b;
+}
+.gallery-project-select select {
+  max-width: 255px;
+  min-height: 44px;
+  padding: 10px 32px 10px 12px;
+  border: 1px solid #c9ccc6;
+  background: var(--cream);
+  color: var(--ink);
+  font: inherit;
+  border-radius: 0;
+}
+.gallery-project-select select:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+.gallery-project {
+  margin: 35px 0 65px;
+  scroll-margin-top: 115px;
+}
+.gallery-project-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  border-bottom: 1px solid #d5d6ce;
+  padding-bottom: 22px;
+}
+.project-index {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--red);
+}
+.gallery-project-heading h2 {
+  margin-top: 9px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(32px, 3.6vw, 47px);
+  line-height: 1.05;
+}
+.gallery-project-heading p {
+  font-size: 12px;
+  color: #747c7a;
+  margin-top: 8px;
+}
+.project-journey {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #6a766e;
+  white-space: nowrap;
+}
+.project-journey.has-boceto {
+  color: var(--red);
+}
+.gallery-project .photo-mosaic {
+  align-items: start;
+}
+.viewer-compare-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ffffff30;
+  background: transparent;
+  font-size: 11px;
+  min-height: 44px;
+}
+.viewer-compare-button[aria-pressed="true"] {
+  background: var(--red);
+  border-color: var(--red);
+}
+.photo-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  height: 100%;
+  background: #ffffff25;
+}
+.photo-comparison figure {
+  margin: 0;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: #111b2b;
+  min-width: 0;
+  overflow: hidden;
+}
+.photo-comparison img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.photo-comparison figcaption {
+  position: absolute;
+  bottom: 18px;
+  left: 12px;
+  font-size: 10px;
+  background: var(--cream);
+  color: var(--ink);
+  padding: 8px 10px;
+}
+@media (max-width: 1000px) {
+  .gallery-toolbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .gallery-project-select {
+    margin-left: 0;
+  }
+  .gallery-count {
+    margin-left: auto;
+  }
+  .photo-mosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 680px) {
+  .gallery-intro {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .gallery-filters {
+    width: 100%;
+  }
+  .gallery-project-select {
+    font-size: 10px;
+    max-width: calc(100% - 60px);
+  }
+  .gallery-project-select select {
+    max-width: 190px;
+    padding-right: 20px;
+    font-size: 10px;
+  }
+  .gallery-project {
+    margin-block: 28px 42px;
+    scroll-margin-top: 155px;
+  }
+  .gallery-project-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 16px;
+  }
+  .gallery-project-heading h2 {
+    font-size: 34px;
+  }
+  .project-journey {
+    font-size: 10px;
+  }
+  .photo-mosaic {
+    gap: 18px 12px;
+  }
+  .mosaic-card {
+    margin-bottom: 0;
+  }
+  .photo-comparison figcaption {
+    left: 6px;
+    bottom: 10px;
+    padding: 6px 8px;
+    font-size: 9px;
   }
 }
