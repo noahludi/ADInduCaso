@@ -154,7 +154,7 @@ function Hero() {
             <img
               className="hero-hoodies"
               src={PREVIEW}
-              alt="Boceto 3D de buzos blanco y negro con cierre y logo azul de El Ramblón en el pecho"
+              alt="Boceto 3D de buzos y camperas en blanco y negro con logo azul de El Ramblón en el pecho"
               width="1254"
               height="1254"
               fetchPriority="high"
@@ -211,11 +211,11 @@ function Work() {
               alt={
                 mode === "real"
                   ? [
-                      "Buzos blanco y negro de El Ramblón estampados por AD Indumentaria",
-                      "Los dos buzos terminados vistos de frente",
-                      "Buzo blanco con cierre y logo en el pecho",
+                      "Buzos y camperas en blanco y negro de El Ramblón estampados por AD Indumentaria",
+                      "Las prendas terminadas vistas de frente",
+                      "Campera blanca con cierre y logo en el pecho",
                     ][selected]
-                  : "Boceto 3D generado como propuesta para los buzos de El Ramblón"
+                  : "Boceto 3D generado como propuesta para los buzos y camperas de El Ramblón"
               }
               loading="lazy"
             />
@@ -264,7 +264,7 @@ function Work() {
           <div className="project-detail">
             <h3>El Ramblón</h3>
             <p>
-              Buzos con cierre en blanco y negro, con el logo de El Ramblón
+              Buzos y camperas en blanco y negro, con el logo de El Ramblón
               estampado en el pecho.
             </p>
           </div>

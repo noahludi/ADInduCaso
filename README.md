@@ -44,7 +44,7 @@ La carpeta `dist/` se puede publicar en cualquier hosting de sitios estáticos. 
 
 ## Qué incluye
 
-- Portada con el logo original y el boceto de los buzos blanco y negro.
+- Portada con el logo original y el boceto de los buzos y camperas en blanco y negro.
 - Recorrido de cinco etapas que avanza y retrocede con el scroll: referencia, boceto, aprobación, estampado y resultado. La escena permanece a la vista y Motion anima la referencia, el boceto y una revelación de la foto real.
 - Caso de El Amigo del Chamamecero con el motivo, el boceto original y la remera terminada. Las pestañas y el teclado también permiten recorrer las etapas; el modo de movimiento reducido muestra cada imagen sin transformaciones.
 - Comparación entre el boceto y las fotografías reales del trabajo terminado.
